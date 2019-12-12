@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+mat-form-field {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+button {
+  margin-right: 10px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}

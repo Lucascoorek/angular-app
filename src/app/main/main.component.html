@@ -1,0 +1,28 @@
+<div class="main-wrapper">
+  <mat-form-field>
+    <input
+      matInput
+      #searchInput
+      type="text"
+      [formControl]="searchForm"
+      (keyup)="onSearchValueChanges(searchInput)"
+      placeholder="Serch for planet"
+    />
+    <mat-icon matSuffix svgIcon="search" class="search-icon"></mat-icon>
+  </mat-form-field>
+  <mat-spinner [diameter]="50" *ngIf="spinner"></mat-spinner>
+  <app-list [planetsList]="list"></app-list>
+  <div class="button-wrapper">
+    <button
+      mat-flat-button
+      color="primary"
+      (click)="fetchPrev()"
+      *ngIf="previous"
+    >
+      Prev
+    </button>
+    <button mat-flat-button color="primary" (click)="fetchNext()" *ngIf="next">
+      Next
+    </button>
+  </div>
+</div>

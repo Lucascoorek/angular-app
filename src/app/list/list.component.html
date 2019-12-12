@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let item of planetsList">
+    <button mat-stroked-button color="primary" (click)="onSelect(item)">
+      {{ item.name }}
+    </button>
+  </li>
+</ul>
